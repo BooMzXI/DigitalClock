@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'poppins', sans-serif;
+    height: 100vh;
+    background: url(img/Nature.jpg) center no-repeat;
+    background-size: cover;
+    margin: 0;
+}
+.warpper {
+    background: rgba(0, 0, 0, 0.8);
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+.container {
+    background: linear-gradient(135deg, #FF0000, #F2FF00, #D206D5, #06D507);
+    /*background: linear-gradient(135deg,#14ffe9 ,#ffeb3b ,#ff00e0);*/
+    width: 360px;
+    height: 100px;
+    border-radius: 10px;
+    cursor: default;
+    animation: colorMove 1.5s infinite;
+}
+.container .border,
+.container span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.container .border {
+    background: #1b1b1b;
+    border-radius: 6px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 9;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 90px;
+    text-align: center;
+    padding: 5px;
+}
+.container .border #time {
+    line-height: 85px;
+    color: #fff;
+    font-size: 50px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg,#14ffe9 ,#ffeb3b ,#ff00e0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: colorMove 1.5s infinite;
+}
+.container span {
+    height: 100%;
+    width: 100%;
+    background: inherit;
+    border-radius: 10px;
+}
+.container span:first-child {
+    filter: blur(10px);
+}
+.container span:last-child {
+    filter: blur(20px);
+}
+
+@keyframes colorMove {
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
