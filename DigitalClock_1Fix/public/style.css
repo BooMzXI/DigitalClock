@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Courier;
+    height: 100vh;
+    background: url(img/Nature.jpg) center no-repeat;
+    background-size: cover;
+    margin: 0;
+}
+.warpper {
+    background: rgba(0, 0, 0, 0.6);
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+.warpper .container {
+    background: linear-gradient(135deg, #FF0000, #F2FF00, #D206D5, #06D507);
+    width: 360px;
+    height: 100px;
+    border-radius: 10px;
+    cursor: default;
+    animation: colorMove 1.5s infinite;
+}
+.warpper .container .border,
+.warpper .container span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.warpper .container .border {
+    background: #1b1b1b;
+    border-radius: 6px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 9;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 90px;
+    text-align: center;
+    padding: 5px;
+}
+.warpper .container .border #time {
+    line-height: 85px;
+    color: #fff;
+    font-size: 50px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg,#14ffe9 ,#ffeb3b ,#ff00e0);
+    background-clip: text;
+    color: #14ffe9;
+    animation: colorMove 1.5s infinite;
+    background: transparent;
+}
+
+.warpper .container span {
+    background: inherit;
+    border-radius: 10px;
+    width: 360px;
+    height: 100px;
+}
+.warpper .container span:first-child {
+    filter: blur(10px);
+}
+.warpper .container span:last-child {
+    filter: blur(20px);
+}
+@keyframes colorMove {
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
